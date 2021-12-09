@@ -1,0 +1,41 @@
+<MainWindow>
+    name: "main"
+
+    FloatLayout:
+        orientation: 'vertical'
+        size: root.width, root.height
+
+
+        Label:
+            id: click_label
+            font_size: 32
+            pos_hint: {'center_x': 0.2, 'center_y': 0.9}
+            background_color: [0,0,1,1]
+
+        Spinner:
+            id: spinner_id
+            text: "Other Sounds"
+            values: ["Alarm 1", "Alarm 2", "Alarm 3"]
+            pos_hint: {'center_x': 0.5, 'center_y': 0.7}
+            size_hint: (1,.1)
+            background_color: [0,0,1,1]
+            #on_text: root.spinner_clicked(spinner_id.text)
+
+        Label:
+            text: ''
+
+
+        Button:
+            text: "Start Ride"
+            text_color: [1,1,1,1]
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            size_hint: (.5,.1)
+            font_size: 19
+            background_color: [0,0,1,1]
+            #background_color: (48/255, 84/255, 150/255, 1)
+            #background_normal: ''
+            on_press: root.start_ride()
+            #on_release: app.root.current = "second"
+
+
+
